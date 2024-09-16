@@ -8,7 +8,8 @@ pipeline {
         }
         stage('STAGE 01'){
             steps{
-                echo "Pipeline Usando Jenkinsfile"
+                echo "Executando SH"
+                sh 'which java'
             }
         }
     }
