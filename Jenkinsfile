@@ -1,15 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('STAGE 00'){
+        stage('Build') {
             steps{
-                echo "Pipeline Usando Jenkinsfile"
-            }
-        }
-        stage('STAGE 01'){
-            steps{
-                echo "Executando SH"
-                sh 'which java'
+                sh 'mvn package'
             }
         }
     }
